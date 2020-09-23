@@ -8,6 +8,7 @@ void display(int (*a)[2]) {
     }
 }
 
+/* Return 2D Array */
 int (*generate())[2] {
     static int arr[][2] = { 11, 22, 33, 44 };
     return arr;
