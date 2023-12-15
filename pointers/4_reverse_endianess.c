@@ -1,3 +1,6 @@
+/***
+    Reverse Endiness
+ **/
 #include <stdio.h>
 
 int rev(int a) {
