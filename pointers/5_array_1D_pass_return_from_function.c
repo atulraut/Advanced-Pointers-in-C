@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Array wont create copy, only we pass address.
 void display(int *a) {
     int i;
     for (i = 0; i < 2; i++)
@@ -32,14 +33,13 @@ int main() {
 }
 
 /***
-=> ./a.out 
+=> ./a.out
 [display] 11
 [display] 22
 [main] ->11
 [main] ->22
 [main] ptr=0x7ffd1213dd20 ptr+2 =0x7ffd1213dd28 ptr-2->0x7ffd1213dd18
-[main] ptr=0x7ffd1213dd20 ptr+2 =33 
+[main] ptr=0x7ffd1213dd20 ptr+2 =33
 [main] ptr=0x7ffd1213dd20 ptr+2 =33 ptr-2->6295616
 [main] arr=0x7ffd1213dd20 arr+1 =0x7ffd1213dd24 arr+4 =0x7ffd1213dd30 &arr+1->0x7ffd1213dd34
 */
-

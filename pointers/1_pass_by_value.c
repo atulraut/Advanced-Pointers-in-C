@@ -2,8 +2,8 @@
 
 /***
  * Whenever you are passing address of variable basically you are passing
- * copy of that address passing pointer by value.  
- * Remember pointers are passed by value. 
+ * copy of that address passing pointer by value.
+ * Remember pointers are passed by value.
  * i.e. the copy of address in pointer is created
  */
 
@@ -17,3 +17,8 @@ int main() {
     printf("x = %d\n", x);
     return 0;
 }
+
+/***
+ * => ./a.out
+   x = 10
+ * */

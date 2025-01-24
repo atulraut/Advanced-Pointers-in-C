@@ -47,3 +47,12 @@ int main() {
   test_ptr();
   return 0;
 }
+
+/*
+  => ./a.out
+  x = 10
+
+  sz-->1
+
+  sz-->4
+*/

@@ -1,3 +1,7 @@
+/***
+    Check - /home/atul/dev/atclib/bitwise/crack-d-ivi/litle-big-endian.c
+ */
+
 #include <stdio.h>
 
 int main() {
@@ -9,3 +13,8 @@ int main() {
         printf("Big Endian.\n");
     return 0;
 }
+
+/**
+ * => ./a.out
+   Little Endian.
+ */

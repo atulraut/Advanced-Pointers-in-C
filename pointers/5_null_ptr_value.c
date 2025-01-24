@@ -8,4 +8,3 @@ int main() {
     printf("%p, %p, %p, %p\n", ++p1, ++p2, ++p3, ++p4);
     return 0;
 }
-
