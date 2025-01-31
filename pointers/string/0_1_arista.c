@@ -49,7 +49,7 @@ int main() {
 **/
 
 /**
-   => ./a.out 
+   => ./a.out
    L=[19] [working] :| s  ->[12345]
    L=[20] [working] :| *s ->[49]
    L=[21] [working] :| *s ->[1]
