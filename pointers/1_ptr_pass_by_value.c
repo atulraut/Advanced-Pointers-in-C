@@ -29,6 +29,13 @@ void test_sizeof() {
   printf ("\nsz-->%ld \n", arrsz(arr));
 }
 
+
+/***
+ * Whenever you are passing address of variable basically you are passing
+ * copy of that address passing pointer by value.
+ * Remember pointers are passed by value.
+ * i.e. the copy of address in pointer is created
+ */
 int a = 20;
 void myfun(int* p) {
   p = &a;

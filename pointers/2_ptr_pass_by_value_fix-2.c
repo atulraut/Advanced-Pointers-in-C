@@ -39,8 +39,8 @@ int test1() {
 
 void changePointer2(int *ptr) {
   static int y = 99;
-  //    ptr = &y; // Change the pointer to point to y  - Not work here
-  *ptr = y;
+  ptr = &y; // Change the pointer to point to y  - Not work here
+  //*ptr = y;
 }
 
 int test2() {
