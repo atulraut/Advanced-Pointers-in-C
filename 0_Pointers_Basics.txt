@@ -1,0 +1,28 @@
+
+-----------------------------------------------------------------------
+Fri Mar 27 08:04:50 PDT 2026
+-----------------------------------------------------------------------
+Basics of Pointers :
+-----------------------------------------------------------------------
+
+Pointer Syntax : int d = 10;
+Declaration :
+	    double *ptr;
+Initialization :
+	    ptr = &d;
+Dereferencing:
+	printf ("", *ptr);
+
+Reference Operator - &   [ADR]
+	  - [A]ddress of - Read as
+	  - [D]irection operator - Also called
+	  - [R]erence Operator
+Dereference operator - * [VID]
+	  - [V]alue at - Read as
+	  - [I]ndirection operator
+	  - [D]eference operator
+
+Level of Indirection :
+int *ptr   - level of indirection is 1.
+int **ptr  - level of indirection is 2.
+int ***ptr - level of indirection is 3.

@@ -41,13 +41,13 @@ int main() {
     }
     printf("\n");
 
-    debug("arr = %p ", arr);
-    debug("*arr = %p ", *arr);
-    debug("&arr = %p ", &arr);
+    debug("arr  = [%p] ", arr);
+    debug("*arr = [%p] ", *arr);
+    debug("&arr = [%p] ", &arr);
 
-    debug("arr+1 = %p ", arr+1);
-    debug("*arr+1 = %p ", *arr+1);
-    debug("&arr+1 = %p ", &arr+1);
+    debug("arr+1  = [%p] ", arr+1);
+    debug("*arr+1 = [%p] ", *arr+1);
+    debug("&arr+1 = [%p] ", &arr+1);
 
     debug("arr[1][2]  --> %d ", arr[1][2]);
     debug("arr[2][-3] --> %d ", arr[2][-3]);
