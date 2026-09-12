@@ -9,6 +9,7 @@ int subtract(int p, int q) {
 }
 
 int main() {
+
     int (*arr[2])(int, int);
     int i, res;
     arr[0] = sum;
@@ -19,3 +20,8 @@ int main() {
     }
     return 0;
 }
+
+/**
+   16
+   8
+*/

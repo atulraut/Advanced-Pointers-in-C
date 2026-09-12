@@ -1,6 +1,8 @@
 
 -----------------------------------------------------------------------
 Fri Mar 27 08:04:50 PDT 2026
+Ref :
+https://github.com/atulraut/atclib/blob/master/array/array_tips.txt
 -----------------------------------------------------------------------
 Basics of Pointers :
 -----------------------------------------------------------------------
@@ -26,3 +28,91 @@ Level of Indirection :
 int *ptr   - level of indirection is 1.
 int **ptr  - level of indirection is 2.
 int ***ptr - level of indirection is 3.
+
+
+A dangling pointer is a pointer that refers to an object whose
+lifetime has ended or whose memory has been released.
+Dereferencing it causes undefined behavior.
+Ex -
+    int *p = malloc(sizeof(int));
+    *p = 100;
+    free(p);
+    printf("%d\n", *p);  // ❌ dangling pointer
+
+-----------------------------------------------------------------------------
+Precedence Table0 :
+-----------------------------------------------------------------------------
+* ++ - Both operator has same precendence, if we encounter this problem
+then use associativity which is right to left. e.g. below one.
+
+Ref - pontiers_2/1_precendence_ptr.c/jpg
+int i = 10;
+int* ptr = &i;
+
+debug("Out = %d", *ptr++);
+
+*ptr++ == *(ptr++) :: <-- ptr++ execute first and then result *ptr.
+
+Since its post increament operator so first 10 get
+printed.
+
+++*ptr++ ==
+1. (ptr++)
+2. *(ptr++)
+3. ++*ptr++ = here preincreament operator apply on value of ptr i.e. *ptr
+
+++ *ptr ++
+   ↑   ↑
+   |   |
+   +---+  postfix ++ has higher precedence
+
+++ *ptr ++
+    ↑
+    |
+    * has lower precedence than postfix ++
+
+Parsed as: ++(*(ptr++))
+
+++ *ptr ++
+    ↑
+    |
+    * has lower precedence than postfix ++
+
+Parsed as: ++(*(ptr++))
+
+#Final
+        ↓
+++  *  ptr  ++
+↓       ↑  ↑
+|       |  |
++-------+  +-- 1.postfix ++
+    |
+    +-- 2.dereference *
++-- 3. preincrement on value at *ptr
+-----------------------------------------------------------------------------
+
+lvalue error :
+
+int a = 5;
+int b = 7;
+
+(a+b)++ <-- (12)++ <-- 12++ we cant do so lvalue error we get it here.
+
+++a++ <-- Same error, associativity right to left, result is in tempory
+location which doesnt have memory associated with gives us lvalue error.
+
+Both ++ operators here are postfix/prefix increment operators, but their precedence is different:
+
+Operator	Type	   	Precedence
+a++		postfix ++	higher
+++a		prefix ++	lower
+
+So the compiler parses:
+++a++ as: ++(a++)
+
+not: (++a)++  <-- That's the important precedence point.
+
+Precedence determines grouping between different operators;
+Associativity resolves grouping when operators of the same precedence are adjacent.
+
+-----------------------------------------------------------------------------

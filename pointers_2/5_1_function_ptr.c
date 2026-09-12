@@ -1,3 +1,8 @@
+/**
+
+   function pointers in c!
+
+ */
 #include <stdio.h>
 
 int sum(int p, int q) {
@@ -20,3 +25,8 @@ int main() {
     printf("%d\n", res);
     return 0;
 }
+
+/**
+   16
+   8
+ */
